@@ -20,8 +20,12 @@ import './App.css';
 
 
 function App() {
+  
+function voice(){
+  alert('hiiiii');
+}
   const [placeholder, setPlaceholder] = useState('Hi');
-
+// alert(" HIIII");
   useEffect(() => {
     fetch('/hello').then(res => res.json()).then(data => {
       setPlaceholder(data.result);
@@ -33,7 +37,7 @@ function App() {
     return (
       <div className="App">
         <header className="App-header">
-          <img src={A} className="test" alt="test" style={{width: 350, height: 250}}/>
+          <img src={A} className="test" alt="test" style={{width: 350, height: 250}} onClick={voice}/>
           <p>Liberte says {placeholder}</p>
         </header>
       </div>
